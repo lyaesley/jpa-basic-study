@@ -25,13 +25,10 @@ fun main() {
     tx.begin()
 
     try {
-        val member = Member(1L, "HelloA")
+        val member = Member()
+        val member2 = Member()
         em.persist(member)
-        println("=======111111===========")
-        val findMember = em.find(Member::class.java, 1L)
-        println("========22222==========")
-        println(findMember.name)
-
+        em.persist(member2)
         tx.commit()
     } catch (e: Exception) {
         tx.rollback()

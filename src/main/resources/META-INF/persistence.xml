@@ -23,7 +23,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
             <!--<property name="hibernate.id.new_generator_mappings" value="true"/>-->
 
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <!--
                 -   hibernate.hbm2ddl.auto
                     -   create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)

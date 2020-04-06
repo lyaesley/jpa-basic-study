@@ -12,7 +12,7 @@
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/><!-- note: javax.persistence.* / 자바 표준 jpa -->
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.password" value=""/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/D:/dev/h2/db/jpaStudy"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/h2/db/jpaStudy"/>
             <!-- note: 하이버네이트에서만(하이버네이트 전용 옵션) 쓸 수 있다. dialect(방언) : SQL 표준을 지키지 않거나 특정 DB만의 고유한 기능-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 
@@ -23,7 +23,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
             <!--<property name="hibernate.id.new_generator_mappings" value="true"/>-->
 
-            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
             <!--
                 -   hibernate.hbm2ddl.auto
                     -   create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)

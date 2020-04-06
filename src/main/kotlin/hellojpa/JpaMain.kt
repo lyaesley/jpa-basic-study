@@ -24,11 +24,21 @@ fun main() {
     val tx: EntityTransaction = em.transaction
     tx.begin()
 
-    val member = Member(1L, "HelloA")
-    em.persist(member)
+    try {
+        val member = Member(1L, "HelloA")
+        em.persist(member)
+        println("=======111111===========")
+        val findMember = em.find(Member::class.java, 1L)
+        println("========22222==========")
+        println(findMember.name)
 
-    tx.commit()
-    em.close() // em 닫기
+        tx.commit()
+    } catch (e: Exception) {
+        tx.rollback()
+    } finally {
+        em.close()
+    }
+
     emf.close() // emf 닫기
 
 }

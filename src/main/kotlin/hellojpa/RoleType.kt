@@ -1,5 +1,5 @@
-package hellojpa
-
-enum class RoleType {
-    USER, ADMIN
-}
+//package hellojpa
+//
+//enum class RoleType {
+//    USER, ADMIN
+//}

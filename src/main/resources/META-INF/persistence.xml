@@ -6,7 +6,12 @@
         표준스펙 이해 필요
     -->
     <persistence-unit name="hello"> <!-- note: name="hello"? EntityManagerFactory 에서 설정정보를 참조하기 위한 이름 세팅-->
-        <class>hellojpa.Member</class>
+
+        <class>jpaShop.domain.Item</class>
+        <class>jpaShop.domain.Member</class>
+        <class>jpaShop.domain.Order</class>
+        <class>jpaShop.domain.OrderItem</class>
+        <class>jpaShop.domain.OrderStatus</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/><!-- note: javax.persistence.* / 자바 표준 jpa -->
@@ -23,7 +28,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
             <!--<property name="hibernate.id.new_generator_mappings" value="true"/>-->
 
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
             <!--
                 -   hibernate.hbm2ddl.auto
                     -   create: 기존테이블 삭제 후 다시 생성 (DROP + CREATE)

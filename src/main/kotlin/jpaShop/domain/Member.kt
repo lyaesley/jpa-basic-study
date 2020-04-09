@@ -8,7 +8,7 @@ import javax.persistence.*
     sequenceName =  "MEMBER_SEQ",   //매핑할 데이터베이스 시퀀스 이름
     initialValue = 1, allocationSize = 10
 )
-data class Member (
+class Member (
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ_GENERATOR")
     @Column(name = "member_id")

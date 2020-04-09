@@ -10,7 +10,7 @@ import javax.persistence.*
     sequenceName =  "ORDER_SEQ",   //매핑할 데이터베이스 시퀀스 이름
     initialValue = 1, allocationSize = 10
 )
-data class Order(
+class Order(
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ORDER_SEQ_GENERATOR")
     @Column(name = "order_id")
